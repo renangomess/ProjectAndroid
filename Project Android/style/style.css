@@ -107,6 +107,7 @@ header{
     min-height: 150px; /* Altura Minima  */
     text-align: center;
     padding-top: 40px; /* Distancia o titulo do topo  */
+    
 }
 
 header > h1 {
@@ -125,11 +126,12 @@ header > p {
     color: white;
     font-family: 'Courier New', Courier, monospace;
     font-size: 1.2em; /* Para aumentar o paragrafo    */
-    max-width: 600px; /* Quando coloca a largura dgrande como 600 ele vira um block ai vc tem que configurar o MARGIN AUTO abaixo*/
+    max-width: 600px; /* Quando coloca a largura grande como 600 ele vira um block ai vc tem que configurar o MARGIN AUTO abaixo*/
     margin: auto; /* Centraliza  */
     padding-left: 10px;
     padding-right: 10px;
     text-shadow: 2px 2px 0px black; /* Sombra no paragrafo */
+    padding: 10px;
 
 }
 
@@ -138,6 +140,7 @@ nav {
     background-color: var(--cor5);
     padding: 10px; /* deixar o nav mais gordinho */
     box-shadow: 0px 7px 7px black;
+    
 }
 
 nav > a { /* Aqui o Link dentro de Nav */
@@ -147,6 +150,7 @@ nav > a { /* Aqui o Link dentro de Nav */
     text-decoration: none; /* Para ele perder o sublinhado */
     font-weight: bold; /* Deixar em negrito */
     transition-duration: 1s; /* Quando mexer o mouse em cima do link levara um segundo */
+    font-size: 12px;
    
 
 }
