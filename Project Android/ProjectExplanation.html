@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Explanation</title>
+
+    <h1>Explicacao do Projeto</h1>
+
+    <p>Abaixo a explicacao do Projeto com as TAGs e CSS para a formulacao do projeto, repare que temos tambem os comentarios com explicacao das funcoes dos comandos.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h1>Responsividade</h1>
+
+    <p>Responsividade e adaptar o tamanho e o conteudo do seu site ao tamanho de telas diferentes, entao quando vc abre um video, um site em computadores com tamanho de telas diferentes e tambem de um celular por exemplo quando vc ve um texto o celular fica em pe mas quando vc ve video vc deita o celular entao vc precisa adaptar o seu conteudo para esse tipo de variacao que e o que chamamos de RESPONSIVIDADE que o seu site vai responder o tamanho da tela que sera exibido. </p>
+
+    <p>Temos muitos recurso avancados porem iremos ver o mais simples no momento que e limitar o tamanho minimo e maximo de uma interface, para verificar o tamanho em tempo real temos o WINDOW RESIZER que foi instalado no browser pelo Google Chrome Web Store, vc consegue ver como ficara no tamanho de tablet, celular etc</p> 
+
+    <p>Entao abaixo criamos um arquivo separado para treinar a RESPONSIVIDADE, Observe que tive que tirar a TAG < para poder funcionar a identacao abaixo </p>
+
+
+    <pre>
+
+         <code>
+
+            !DOCTYPE html>
+
+            html lang="en">
+            
+            head>
+            
+                meta charset="UTF-8">
+                meta http-equiv="X-UA-Compatible" content="IE=edge">
+                meta name="viewport" content="width=device-width, initial-scale=1.0">
+            
+                title> Teste de Responsividade /title>
+
+
+            style>
+
+                body {
+        
+                    background-color: gray;
+                }
+                
+                main{
+        
+                    background-color: white;
+                    padding: 20px;
+                    border-radius: 10px;
+        
+                    min-width: 300px; /* Largura maxima de Celulares antigos */
+                    max-width: 800px;
+        
+                    margin: auto; /* centraliza quando aumentar a pagina */
+                }
+        
+                img {
+                     
+                    width: 100%; /* Agora a foto nao quebra */
+            
+                }
+        
+            style>
+
+                
+            /head>
+
+
+
+            body>
+        
+            main>
+        
+               h1> Responsividade /h1>
+        
+               p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus molestiae, debitis assumenda sed ab ipsam, autem error nulla, explicabo quos numquam rerum libero enim beatae cum impedit ipsa voluptatem. Itaque? Lorem ipsum dolor sit amet, consectetur adipisicing elit. /p>
+        
+            
+              picture>
+
+        
+                /* o source para trazer a outra foto quando diminuir o tamanho da tela */
+
+               source media="(max-weidth: 600px )" srcset="imagens/irina-block-pq.jpg">
+               img src="imagens/irina-blok-pq.jpg" alt="Irina Block">
+
+        
+              /picture>
+
+        
+               p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus molestiae, debitis assumenda sed ab ipsam, autem error nulla, explicabo quos numquam rerum libero enim beatae cum impedit ipsa voluptatem. Itaque? Lorem ipsum dolor sit amet, consectetur adipisicing elit. /p>
+        
+        
+             /main>
+            
+             /body>
+        
+             /html>
+
+
+
+
+            </code>
+
+
+    </pre>
+    

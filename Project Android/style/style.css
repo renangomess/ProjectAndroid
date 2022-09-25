@@ -1,0 +1,287 @@
+@charset "UTF-8";
+
+
+/* Import que foi pego do Google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+
+/* Font especial do projeto que esta na pasta Fontes*/
+#fonte-face {
+ 
+    font-family: 'Android';
+
+    /* o primeiro ponto antes da barra significa a pasta atual, o segundo ponto e a pasta anterior, colocamos os pontos .. pq as vezes o formato nao funciona */
+    src: url("../fontes/idroid.otf") format('opentype');
+
+    font-weight: normal;
+
+}
+
+
+/* Abaixo Root e a raiz da arvore do documento entao tudo que colocar no root e 
+para o documento inteiro  */
+
+:root  {
+
+    /* Aqui as variaveis que comeca com -- nao esquecer os dois pontos no final. Daqui pra frente e so vc chamar as cores e fontes pelos nomes das variaveis */
+
+    --cor0: #c5ebd6;
+    --cor1: #83e1ad;
+    --cor2: #3ddc84;
+    --cor3: #2fa866;
+    --cor4: #1a5c37;
+    --cor5: #063d1e;
+
+    --fonte-padrao: arial, verdana, helvetica, sans-serif;
+    --fonte-destaque: 'Bebas Neue', cursive;
+    --fonte-android: 'Android', cursive;
+
+}
+
+/*  Por padrao os paragrafos, nav, titulos etc tem um MARGIN de 21 px entao aqui iremos fazer umas configuracoes globais onde nenhum bloco tera MARGIN em cima e em baixo (espacos) ou seja selecionar todo elemento de HTML e tirar as MARGIN e PADDINGS dentro dele com o ASTERISTICO abaixo que quer dizer configuracao global para todos elementos */ 
+
+* {
+
+ margin: 0px;
+ padding: 0px;
+
+} 
+
+
+body {
+
+    background-color: var(--cor0);
+    font-family: var(--fonte-padrao);
+    
+}
+
+a.externo:after { /* Todo link que for da classe externo depois dele*/
+ 
+    content: '\00A0\1F517'; /* Codigo que pegou do imojpia que quer dizer o simbolo externo  */
+
+
+}
+
+
+main p { /* Somente dentro do main para nao mudar paragrafo do cabecalho e outros */
+
+   margin: 15px 0px; /*criou uma margem, espaco para todos os paragrafos */
+   text-align: justify;
+   text-indent: 30px; /* O recuo do paragrafo */ 
+   line-height: 1.5em; /* espacamento entre linhas do paragrafo */
+   font-size: 1.1em; /* Tamanho do paragrafo  */
+
+
+}
+
+main strong { /* Tudo que for main Strong, Negrito  */
+
+    color: var(--cor4);
+    font-weight: bold;
+    background-color: var(--cor1);
+    padding: 2px 6px; /* Da um espacamento */
+}
+
+main a{ /* Tudo que for Link */
+
+    background-color: pink;
+    font-weight: bold;
+    color: blue;
+    text-decoration: none;
+    padding: 2px 6px; /* Da um espacamento */
+
+}
+
+main a:hover{ /* Quando passar o mouse em cima cofigura as TAGS abaixo */
+
+     text-decoration: underline; 
+     color: var(--cor4);
+
+}
+
+
+header{
+
+    background-image: linear-gradient(to bottom, var(--cor2), var(--cor4));
+    min-height: 150px; /* Altura Minima  */
+    text-align: center;
+    padding-top: 40px; /* Distancia o titulo do topo  */
+}
+
+header > h1 {
+
+    color: white;
+    font-family: var(--fonte-destaque);
+    margin-bottom: 20px; /* Distancia um espaco do titulo com o paragrafo */
+    font-size: 3em; /* Para aumentar o Titulo */
+    text-shadow: 2px 2px 0px black;
+    font-weight: normal;
+    
+}
+
+header > p {
+
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.2em; /* Para aumentar o paragrafo    */
+    max-width: 600px; /* Quando coloca a largura dgrande como 600 ele vira um block ai vc tem que configurar o MARGIN AUTO abaixo*/
+    margin: auto; /* Centraliza  */
+    padding-left: 10px;
+    padding-right: 10px;
+    text-shadow: 2px 2px 0px black; /* Sombra no paragrafo */
+
+}
+
+nav {
+
+    background-color: var(--cor5);
+    padding: 10px; /* deixar o nav mais gordinho */
+    box-shadow: 0px 7px 7px black;
+}
+
+nav > a { /* Aqui o Link dentro de Nav */
+
+    color: var(--cor1); /* A cor do texto do link */
+    padding: 10px; /* Aqui da um espaco entro os menus (Links) */
+    text-decoration: none; /* Para ele perder o sublinhado */
+    font-weight: bold; /* Deixar em negrito */
+    transition-duration: 1s; /* Quando mexer o mouse em cima do link levara um segundo */
+   
+
+}
+
+nav > a:hover{ /* Quando passar o mouse em cima do link aparece a cor */
+
+     background-color: var(--cor2);
+
+}
+
+main{
+ 
+    /* Aqui ele para de crescer, e quando diminui ele adapta o conteudo mas nao as imagens */
+    min-width: 300px;
+    max-width: 1000px;
+    margin: auto; /* Aqui para nao ficar tela cheia quando a tela e muito grande   */
+    margin-bottom: 30px; /* Para nao ter o conteudo principal colado no rodape  */
+    background-color: white;
+    padding: 20px; /* Antes o conteudo estava todo grudado, agora nao esta */
+    box-shadow: 0px 0px 10px black; /* Os dois primeiros 0 px e para nao ter espalhamneto nem lateral e nem vertical */
+    border-bottom-left-radius: 10px; /* Os dois Border left and right e para ter o arredondamento somente na parte de baixo  */
+    border-bottom-right-radius: 10px;/* Os dois Border left and right e para ter o arredondamento somente na parte de baixo  */
+}
+
+main h1{
+
+    color: #1a5c37;
+    font-family: var(--fonte-android);
+    font-weight: normal;
+    font-size: 1.8;
+}
+
+main h2{
+
+    font-family: var(--fonte-android);
+    color: var(--cor4);
+    font-size: 1.4em;
+    background-image: linear-gradient(to right, var(--cor1), transparent); /* Da Cor 1 ate transparent */
+    text-indent: 8px;
+    font-weight: normal;
+}
+
+main img{
+
+   /* 100% de largura, isso faz com que ela se esprema e se adapta */
+    width: 100%;
+
+}
+
+main img.pequena{
+
+    max-width: 350px; 
+    /*Aqui precisou do Margin e Display para centralizar a foto, pq a imagem nao e um block mas por padrao tem que acinar o Display tambem */
+    display: block;
+    margin: auto;
+
+}
+
+div.video { /* Tudo que e div da classe Video  */
+
+    background-color: var(--cor5); /* So para identificar */
+    margin: 30px; /* Aqui para dar um espaco entre o video e aside */
+    margin: 0px -20px 30px -20px; /* 0px em cima, na direita -20px, embaixo 30px e na esquerda -20px, para div colar no body */
+    padding: 20px;
+
+    padding-bottom: 57%; /* Configurou o padding aqui pq o video tinha saido fora do lugar e a porcentagem para o tamanho do video, menos que isso ficara uma borda preta DENTRO do video  */ 
+    position: relative; /* Aqui foi configurado pq na classe div.video > iframe  abaixo configurou position: absolute */
+}
+
+div.video > iframe { /* Este Iframe pegou do youtubee nao temos muito poder sobre ele */
+
+    position: absolute;/* Aqui foi configurado pq no position: relative acima configurou position: relative */
+
+    /* Como configurou position: absolute podemos configurar as Tags abaixo  */
+    top: 5%; /* Espaco de cima */
+    left: 5%; /* Espaco na esquerda */
+    width: 90%; /* Largura do Video  */
+    height: 90%; /* Altura do Video  */
+
+}
+
+
+aside > ul{
+
+   list-style-position: inside; /* A posicao da lista para dentro no caso as bolinhas */
+   columns: 2; /* Aqui dividi a lista em duas colunas */
+   list-style-type: '\2714\00A0\00A0'; /* Configura o simbolo de lista, codigo que pegou do emojpidia, o  \00A0\00A0  que dizer espaco pq o simbolo de lista ficou grudado porem nao e compativel com todo navegador */
+
+}
+
+aside > h3 {
+
+  background-color: var(--cor4);
+  color: white;
+  padding: 10px;
+  margin: -10px -10px 0px -10px; /* A de cima -10px, a da direita -10px a debaixo 0px e a da esquerda -10, pq -10? pq queremos que cresca 10px para fora   */
+ border-radius: 10px 10px 0px 0px; /* Para nao perder o arredondamento da borda do asside, em da esquerda e em cima da direita   */
+ 
+}
+
+
+aside {
+
+    background-color: var(--cor1);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 8px black;
+
+
+}
+
+footer{
+
+    background-color: var(--cor5);
+    color: white;
+    text-align: center; /* Centralizar o Rodape */
+    font-size: 0.8em; /* Aumentar ou Diminuir */
+    padding: 5px; /* Deixar o rodape mais gordinho deixando o texto com mais folga */
+
+}
+
+footer > p > a { /* Todo caminho dentro do paragrafo com o link*/
+
+   color: white;
+   font-weight: bolder;
+   text-decoration: none;
+
+
+}
+
+footer a:hover{ /* Quando passar o mouse em cima do link aparece a cor */
+
+    text-decoration: underline;
+    color: var(--cor1);
+
+
+}
+
+                                                                                                                   
