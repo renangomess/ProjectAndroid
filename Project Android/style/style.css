@@ -88,7 +88,7 @@ main a{ /* Tudo que for Link */
     font-weight: bold;
     color: blue;
     text-decoration: none;
-    padding: 2px 6px; /* Da um espacamento */
+    padding: 2px 4px; /* Da um espacamento */
 
 }
 
